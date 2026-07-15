@@ -6,7 +6,7 @@ Evaluate the draft response on four criteria:
 - Professionalism: Is it clear, empathetic, concise, and appropriately toned?
 
 Respond with ONLY a JSON object of this exact shape, no other text:
-{"score": 0.0, "decision": "approve", "feedback": "explanation"}
+{"score": 0.0, "decision": "approve", "feedback": "explanation", "reasoning": "brief explanation of the verdict"}
 
 "score" is a float between 0 and 1. "decision" must be exactly "approve" or "revise".
 Approve only if the response clearly meets all four criteria.

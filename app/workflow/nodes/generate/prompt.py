@@ -4,5 +4,5 @@ Follow the category-specific constraints exactly.
 Be clear, empathetic, and concise.
 
 Respond with ONLY a JSON object of this exact shape, no other text:
-{"response": "your reply text to the customer"}
+{"response": "your reply text to the customer", "reasoning": "brief explanation of how the reply was composed"}
 """

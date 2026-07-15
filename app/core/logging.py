@@ -14,7 +14,7 @@ def _configure_root_logger() -> None:
     root = logging.getLogger()
     root.setLevel(settings.LOG_LEVEL)
     handler = logging.StreamHandler(sys.stdout)
-    handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s"))
+    handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s.%(funcName)s: %(message)s"))
     root.addHandler(handler)
     _CONFIGURED = True
 
@@ -34,4 +34,6 @@ def log_with_context(
     """Log a message with structured context appended, per project logging convention."""
     context = context or {}
     log_fn = getattr(logger, level.lower(), logger.info)
-    log_fn(f"{message} | context={context}")
+    # stacklevel=2 so %(funcName)s resolves to the caller of log_with_context,
+    # not this wrapper — replaces the manual "(file.py func)" message suffixes.
+    log_fn(f"{message} | context={context}", stacklevel=2)

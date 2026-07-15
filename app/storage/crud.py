@@ -1,5 +1,7 @@
 import asyncio
 import json
+import os
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
@@ -21,18 +23,26 @@ def _read_session_file(path: Path) -> dict:
 
 def _write_session_file(path: Path, session: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(session, f, indent=2)
+    fd, tmp_name = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(session, f, indent=2)
+        os.replace(tmp_name, path)
+    except BaseException:
+        try:
+            os.unlink(tmp_name)
+        except OSError:
+            pass
+        raise
 
 
 async def load_session(session_id: str) -> Optional[dict]:
-    """Load a session JSON file. Returns None if missing, empty, or corrupted."""
     path = _session_path(session_id)
     if not path.exists():
         log_with_context(
             logger,
             "WARNING",
-            "SESSION-STORAGE: Session file not found (session.py load_session)",
+            "SESSION-STORAGE: Session file not found",
             context={"session_id": session_id},
         )
         return None
@@ -41,7 +51,7 @@ async def load_session(session_id: str) -> Optional[dict]:
         log_with_context(
             logger,
             "INFO",
-            "SESSION-STORAGE: Session loaded (session.py load_session)",
+            "SESSION-STORAGE: Session loaded",
             context={"session_id": session_id},
         )
         return session
@@ -49,14 +59,13 @@ async def load_session(session_id: str) -> Optional[dict]:
         log_with_context(
             logger,
             "WARNING",
-            "SESSION-STORAGE: Failed to read session file (session.py load_session)",
+            "SESSION-STORAGE: Failed to read session file",
             context={"session_id": session_id, "error": str(e)},
         )
         return None
 
 
 async def save_session(session: dict) -> None:
-    """Persist a session dict to its JSON file, always refreshing updated_at."""
     session_id = session.get("session_id")
     session["updated_at"] = datetime.now(timezone.utc).isoformat()
     path = _session_path(session_id)
@@ -65,14 +74,14 @@ async def save_session(session: dict) -> None:
         log_with_context(
             logger,
             "INFO",
-            "SESSION-STORAGE: Session saved (session.py save_session)",
+            "SESSION-STORAGE: Session saved",
             context={"session_id": session_id},
         )
     except Exception as e:
         log_with_context(
             logger,
             "ERROR",
-            "SESSION-STORAGE: Failed to write session file (session.py save_session)",
+            "SESSION-STORAGE: Failed to write session file",
             context={"session_id": session_id, "error": str(e)},
         )
         raise

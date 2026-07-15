@@ -10,33 +10,22 @@ from app.workflow.state import WorkflowState
 
 logger = get_logger(__name__)
 
+CONSTRAINTS_BY_CATEGORY = {
+    "billing": BILLING_CONSTRAINTS,
+    "technical": TECHNICAL_CONSTRAINTS,
+    "account": ACCOUNT_CONSTRAINTS,
+    "subscription": SUBSCRIPTION_CONSTRAINTS,
+    "general": GENERAL_CONSTRAINTS,
+}
 
-async def _apply_handler(state: WorkflowState, category: str, constraints: str) -> WorkflowState:
-    state["handler_constraints"] = constraints
+
+async def apply_handler(state: WorkflowState) -> dict:
+    category = state.category or "general"
+    constraints = CONSTRAINTS_BY_CATEGORY.get(category, GENERAL_CONSTRAINTS)
     log_with_context(
         logger,
         "INFO",
-        f"TICKET-HANDLER: {category.capitalize()} handler applied (handlers.py {category}_handler)",
-        context={"session_id": state.get("session_id"), "ticket_id": state.get("ticket_id"), "category": category},
+        f"TICKET-HANDLER: {category.capitalize()} handler applied",
+        context={"session_id": state.session_id, "ticket_id": state.ticket_id, "category": category},
     )
-    return state
-
-
-async def billing_handler(state: WorkflowState) -> WorkflowState:
-    return await _apply_handler(state, "billing", BILLING_CONSTRAINTS)
-
-
-async def technical_handler(state: WorkflowState) -> WorkflowState:
-    return await _apply_handler(state, "technical", TECHNICAL_CONSTRAINTS)
-
-
-async def account_handler(state: WorkflowState) -> WorkflowState:
-    return await _apply_handler(state, "account", ACCOUNT_CONSTRAINTS)
-
-
-async def subscription_handler(state: WorkflowState) -> WorkflowState:
-    return await _apply_handler(state, "subscription", SUBSCRIPTION_CONSTRAINTS)
-
-
-async def general_handler(state: WorkflowState) -> WorkflowState:
-    return await _apply_handler(state, "general", GENERAL_CONSTRAINTS)
+    return {"handler_constraints": constraints}

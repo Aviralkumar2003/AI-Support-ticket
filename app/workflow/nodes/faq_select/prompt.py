@@ -3,7 +3,7 @@ You will be given a list of candidate FAQ entries (id, question, answer) and the
 Select only the entries that are actually relevant to answering the message.
 
 Respond with ONLY a JSON object of this exact shape, no other text:
-{"selected_ids": ["FAQ-001", "FAQ-002"]}
+{"selected_ids": ["FAQ-001", "FAQ-002"], "reasoning": "brief explanation of why these entries were chosen"}
 
-If none of the candidates are relevant, respond with {"selected_ids": []}.
+If none of the candidates are relevant, respond with {"selected_ids": [], "reasoning": "why nothing was relevant"}.
 """

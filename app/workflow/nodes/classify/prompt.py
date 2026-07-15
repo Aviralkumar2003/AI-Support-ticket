@@ -13,5 +13,5 @@ Urgency: low, medium, high, critical
 Sentiment: positive, neutral, negative
 
 Respond with ONLY a JSON object of this exact shape, no other text:
-{"category": "...", "urgency": "...", "sentiment": "...", "summary": "one sentence summary of the issue"}
+{"category": "...", "urgency": "...", "sentiment": "...", "summary": "one sentence summary of the issue", "reasoning": "brief explanation of the classification"}
 """

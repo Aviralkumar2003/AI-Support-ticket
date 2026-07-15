@@ -1,364 +1,182 @@
 [
-
   {
-
     "id": "FAQ-001",
-
     "category": "account",
-
     "question": "How do I create a TaskFlow account?",
-
     "answer": "Open the TaskFlow sign-up page and enter your name, work email address, and a secure password. A verification email will be sent to the provided address. The account becomes active only after the email is verified. If the verification email does not arrive within a few minutes, ask the user to check the spam folder or request another verification email."
-
   },
-
   {
-
     "id": "FAQ-002",
-
     "category": "account",
-
     "question": "I did not receive the verification email. What should I do?",
-
     "answer": "Ask the user to confirm that the email address entered during registration is correct. They should check the spam, junk, promotions, and blocked-sender folders before requesting another verification email from the login page. Repeated requests may invalidate older links, so the user should open only the most recent email. If no email arrives after another attempt, collect the registered email address and escalate the case to support."
-
   },
-
   {
-
     "id": "FAQ-003",
-
     "category": "account",
-
     "question": "How do I reset my password?",
-
     "answer": "The user should select 'Forgot Password' on the TaskFlow login page and enter the email address linked to their account. TaskFlow will send a password-reset link to that email. The user should create a new password using the most recent reset link. Support agents must never request the user's current password, new password, OTP, or authentication code."
-
   },
-
   {
-
     "id": "FAQ-004",
-
     "category": "account",
-
     "question": "My password reset link has expired or does not work.",
-
     "answer": "Ask the user to request a new password-reset email and use only the latest link received. Older links may expire or become invalid after a new request. The user should also try opening the link in the same browser where the reset was requested or in a private window. If the latest link still fails, collect the registered email address, browser name, and error message, then escalate the issue."
-
   },
-
   {
-
     "id": "FAQ-005",
-
     "category": "account",
-
     "question": "How do I change my registered email address?",
-
     "answer": "The user can open Account Settings, update the email address, and verify the new address using the link sent by TaskFlow. Until verification is completed, the old email may remain active. If the user no longer has access to the current email address, support should not change the email automatically. Collect the workspace name, original email address, requested new email address, and safe ownership details, then escalate for manual verification."
-
   },
-
   {
-
     "id": "FAQ-006",
-
     "category": "account",
-
     "question": "How do I invite team members to a workspace?",
-
     "answer": "A workspace administrator can open Workspace Settings, select 'Members', and choose 'Invite Member'. The administrator should enter the team member's email address and assign the appropriate role before sending the invitation. If the invited user does not receive the email, ask them to check spam folders and confirm that the correct email address was used. Expired invitations should be cancelled and sent again."
-
   },
-
   {
-
     "id": "FAQ-007",
-
     "category": "account",
-
     "question": "Why can I not access my workspace?",
-
     "answer": "Common causes include using a different email address, an expired invitation, removal from the workspace, insufficient permissions, or the workspace being deactivated. Ask the user to confirm the workspace name, the email address used to sign in, and the exact error message. Do not confirm that the user was removed unless this is verified. If access cannot be restored through a new invitation or correct login, escalate to the workspace administrator or support team."
-
   },
-
   {
-
     "id": "FAQ-008",
-
     "category": "account",
-
     "question": "How do I delete my TaskFlow account?",
-
     "answer": "The user can open Account Settings and select 'Delete Account'. Before deletion, they should export any required data and transfer ownership of workspaces or projects they manage. Account deletion is permanent and may remove personal data and access to owned workspaces. If the user is the only workspace administrator, they should assign another administrator before continuing. Support must not delete an account without appropriate verification."
-
   },
-
   {
-
     "id": "FAQ-009",
-
     "category": "subscription",
-
     "question": "What subscription plans does TaskFlow offer?",
-
     "answer": "TaskFlow offers Free, Pro, and Business plans. Features, member limits, storage limits, integrations, support levels, and billing options vary by plan. The user should review the pricing page for current limits and prices before upgrading. Support responses should not invent plan features or quote outdated prices when the current pricing information is not available."
-
   },
-
   {
-
     "id": "FAQ-010",
-
     "category": "subscription",
-
     "question": "How do I upgrade my TaskFlow subscription?",
-
     "answer": "A workspace administrator can open Workspace Settings, select 'Billing', choose the required plan, and complete payment. The upgraded plan should normally become active shortly after a successful payment. Ask the user to refresh the billing page or sign out and sign in again if the new plan is not immediately visible. If the issue continues, collect the registered email address, workspace name, selected plan, payment time, and transaction ID."
-
   },
-
   {
-
     "id": "FAQ-011",
-
     "category": "subscription",
-
     "question": "I upgraded, but my account still shows the Free plan.",
-
     "answer": "Ask the user to confirm that the upgrade was completed for the correct workspace and account. They should refresh the page, sign out, and sign in again. If the plan still appears as Free, collect the registered email address, workspace name, selected plan, payment date, and transaction ID. Do not confirm that payment was successful or promise immediate activation until the billing record is verified."
-
   },
-
   {
-
     "id": "FAQ-012",
-
     "category": "subscription",
-
     "question": "How do I downgrade my subscription?",
-
     "answer": "A workspace administrator can open Workspace Settings, select 'Billing', and choose a lower plan. The downgrade normally takes effect at the end of the current billing period. Before downgrading, the user should review whether the workspace exceeds the lower plan's member, storage, project, or feature limits. Data is not necessarily deleted immediately, but some features or access may become restricted after the downgrade."
-
   },
-
   {
-
     "id": "FAQ-013",
-
     "category": "subscription",
-
     "question": "How do I cancel my subscription?",
-
     "answer": "A workspace administrator can open Workspace Settings, select 'Billing', and choose 'Cancel Subscription'. The paid plan usually remains active until the end of the current billing period, after which the workspace moves to the applicable lower plan. The user should export important data and review feature limits before cancellation. Cancellation does not automatically create a refund request."
-
   },
-
   {
-
     "id": "FAQ-014",
-
     "category": "subscription",
-
     "question": "Will my data be deleted after I cancel my subscription?",
-
     "answer": "Cancelling a subscription does not immediately delete the TaskFlow account or workspace. However, paid features, storage, integrations, or access limits may change after the current billing period ends. The user should export important information before cancellation. If the workspace exceeds the limits of the lower plan, some content may become read-only or unavailable until usage is reduced or the plan is upgraded again."
-
   },
-
   {
-
     "id": "FAQ-015",
-
     "category": "subscription",
-
     "question": "Can I switch from monthly billing to annual billing?",
-
     "answer": "A workspace administrator can open the Billing section and select the annual billing option. Any applicable price adjustment, credit, or next billing date should be displayed before confirmation. The system should not assume that unused monthly charges will always be refunded. If the billing page does not show the option, collect the workspace name and current plan, then escalate to billing support."
-
   },
-
   {
-
     "id": "FAQ-016",
-
     "category": "billing",
-
     "question": "Why was I charged twice?",
-
     "answer": "A duplicate charge may result from multiple checkout attempts, a payment retry, two active subscriptions, or a temporary authorization that later disappears. Ask the user to check whether both entries are completed charges rather than one pending authorization. Collect the registered email address, workspace name, charge dates, amounts, and both transaction IDs. Never ask for full card details, CVV, OTP, or banking password. Do not promise a refund until the billing team verifies the transactions."
-
   },
-
   {
-
     "id": "FAQ-017",
-
     "category": "billing",
-
     "question": "My payment failed. What should I do?",
-
     "answer": "Ask the user to verify that the billing details are correct, the card has sufficient funds, and online, recurring, or international transactions are enabled where required. They may retry once or use another supported payment method. Repeated attempts should be avoided because they can create multiple pending authorizations. If payment continues to fail, collect the payment method type, country, approximate attempt time, and visible error message. Do not ask for full card details."
-
   },
-
   {
-
     "id": "FAQ-018",
-
     "category": "billing",
-
     "question": "How can I download an invoice?",
-
     "answer": "A workspace administrator can open Workspace Settings, select 'Billing', and open the invoice or billing-history section. Invoices for completed payments can be downloaded from there. If an invoice is missing, ask the user to confirm the workspace, billing period, and payment status. Pending or failed payments may not generate a final invoice."
-
   },
-
   {
-
     "id": "FAQ-019",
-
     "category": "billing",
-
     "question": "Can I update the company name or tax details on an invoice?",
-
     "answer": "The user should update the billing profile before the next invoice is generated. Changes generally apply to future invoices. For an already issued invoice, collect the invoice number, current billing details, corrected company name, billing address, and tax information, then escalate to billing support. Do not guarantee that a historical invoice can be changed, because this may depend on accounting and tax rules."
-
   },
-
   {
-
     "id": "FAQ-020",
-
     "category": "billing",
-
     "question": "How do I request a refund?",
-
     "answer": "Refund requests are reviewed under the current TaskFlow refund policy and are not automatically approved. Collect the registered email address, workspace name, transaction ID, payment date, amount, plan, and reason for the request. Confirm that the request has been submitted for review, but do not promise a refund, approval date, or processing timeline unless that information has been verified."
-
   },
-
   {
-
     "id": "FAQ-021",
-
     "category": "billing",
-
     "question": "I was charged after cancelling my subscription.",
-
     "answer": "Ask the user to confirm the cancellation date, billing-period end date, charge date, and whether a cancellation confirmation was received. A charge may relate to a billing cycle that started before cancellation or to another active workspace. Collect the registered email address, workspace name, cancellation confirmation, invoice number, and transaction ID. Do not confirm an incorrect charge or promise a refund before the billing team reviews the records."
-
   },
-
   {
-
     "id": "FAQ-022",
-
     "category": "technical",
-
     "question": "TaskFlow is not loading. What should I do?",
-
     "answer": "Ask the user to check their internet connection, refresh the page, and try a supported browser or private window. They may also clear cached site data and disable browser extensions temporarily. Determine whether the issue affects one page, one workspace, or the entire application. If the issue continues, collect the browser name and version, device type, operating system, affected page, approximate time, and any error message or screenshot."
-
   },
-
   {
-
     "id": "FAQ-023",
-
     "category": "technical",
-
     "question": "My changes are not being saved.",
-
     "answer": "Ask the user to confirm that they have edit permission and a stable internet connection. They should refresh the page carefully and retry a small change. Determine whether the problem affects one task, one project, or all workspace content. If the issue continues, collect the workspace and project names, affected item, approximate time, browser details, and visible error message. Do not state that the data is permanently lost unless confirmed."
-
   },
-
   {
-
     "id": "FAQ-024",
-
     "category": "technical",
-
     "question": "Why am I not receiving TaskFlow notifications?",
-
     "answer": "Ask the user to check TaskFlow notification preferences, workspace settings, project-level settings, browser permissions, device settings, and email spam folders. Confirm whether the missing notification is email, browser, mobile, or in-app. Also confirm that the user is assigned to or following the relevant task. If the issue continues, collect the notification type, affected project, expected event, and approximate time."
-
   },
-
   {
-
     "id": "FAQ-025",
-
     "category": "technical",
-
     "question": "Why can I not upload a file?",
-
     "answer": "Ask the user to confirm that the file type and size are supported by their plan and that sufficient workspace storage is available. They should try renaming the file using simple characters, refreshing the page, or using another browser. If the upload still fails, collect the file type, approximate size, browser name, workspace, project, and visible error message. Do not request the file itself if it may contain confidential information."
-
   },
-
   {
-
     "id": "FAQ-026",
-
     "category": "technical",
-
     "question": "My integration with another application stopped working.",
-
     "answer": "Ask the user to open Workspace Settings, locate the integration, and reconnect or reauthorize it. They should confirm that the connected external account is active and still has the required permissions. Determine whether the issue affects all users or only one account. If the problem continues, collect the integration name, affected workspace, last successful sync time, error message, and recent permission or password changes."
-
   },
-
   {
-
     "id": "FAQ-027",
-
     "category": "general",
-
     "question": "How do I create a new project?",
-
     "answer": "From the TaskFlow dashboard, select 'New Project', enter a project name, choose a template if needed, and configure project visibility. Add team members and assign appropriate permissions before creating tasks. If the user cannot see the option, confirm whether they have permission to create projects in the workspace."
-
   },
-
   {
-
     "id": "FAQ-028",
-
     "category": "general",
-
     "question": "How do I export my project data?",
-
     "answer": "Open the relevant project, select 'Project Settings', and choose the available export option. Export formats and data coverage may depend on the subscription plan. The user should confirm whether they need tasks, comments, attachments, members, or activity history, because not all exports include every data type. If the export fails, collect the project name, selected format, and error message."
-
   },
-
   {
-
     "id": "FAQ-029",
-
     "category": "security",
-
     "question": "I think someone accessed my account without permission.",
-
     "answer": "This issue requires immediate human review. Advise the user to reset their password, sign out of all active sessions if that option is available, and enable multi-factor authentication. Ask them to review recent account activity and connected integrations. Collect only safe details such as the registered email address, approximate time of suspicious activity, and unfamiliar device or location information. Never request passwords, OTPs, authentication codes, recovery codes, or full payment details."
-
   },
-
   {
-
     "id": "FAQ-030",
-
     "category": "security",
-
     "question": "Someone changed my password or registered email address.",
-
     "answer": "This issue requires immediate human escalation. Ask the user to use the account-recovery option if they still have access to the original email account. Collect the original registered email address, workspace name, approximate time of the change, and any security notification received. Do not attempt to change the email address automatically and never request passwords, OTPs, recovery codes, or authentication codes."
-
   }
-
 ]
-
