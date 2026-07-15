@@ -1,0 +1,30 @@
+{
+  "session_id": "SESSION-7231a5b18fec",
+  "ticket_id": "T1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi, how do I use this?",
+      "timestamp": "2026-07-15T03:33:24.696482+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Your ticket has been forwarded to a human support agent for review.",
+      "timestamp": "2026-07-15T03:33:24.708042+00:00"
+    }
+  ],
+  "classification": {
+    "category": "general",
+    "urgency": "low",
+    "sentiment": "neutral",
+    "summary": "question"
+  },
+  "selected_faq_ids": [],
+  "judge_score": 0.0,
+  "judge_feedback": null,
+  "retry_count": 0,
+  "status": "escalated",
+  "human_review_required": true,
+  "created_at": "2026-07-15T03:33:24.696482+00:00",
+  "updated_at": "2026-07-15T03:33:24.708048+00:00"
+}

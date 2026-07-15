@@ -1,0 +1,42 @@
+{
+  "session_id": "SESSION-812a76ed016d",
+  "ticket_id": "TICKET-64849e94",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I think there is a virus",
+      "timestamp": "2026-07-15T03:38:58.605329+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Your ticket has been forwarded to a human support agent for review.",
+      "timestamp": "2026-07-15T03:38:59.097478+00:00"
+    },
+    {
+      "role": "user",
+      "content": "How can the Taskflow account be created",
+      "timestamp": "2026-07-15T03:39:39.792076+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "To create a TaskFlow account, open the TaskFlow sign-up page and enter your name, work email address, and a secure password. A verification email will be sent to the provided address. The account becomes active only after the email is verified. If the verification email does not arrive within a few minutes, check the spam folder or request another verification email.",
+      "timestamp": "2026-07-15T03:39:41.230866+00:00"
+    }
+  ],
+  "classification": {
+    "category": "account",
+    "urgency": "low",
+    "sentiment": "neutral",
+    "summary": "User is asking about creating a Taskflow account"
+  },
+  "selected_faq_ids": [
+    "FAQ-001"
+  ],
+  "judge_score": 1.0,
+  "judge_feedback": "The response is relevant to the customer's question, grounded in the provided FAQ content without hallucination, safe as it does not request sensitive data or make unsupported claims, and is professional, clear, and concise.",
+  "retry_count": 0,
+  "status": "resolved",
+  "human_review_required": false,
+  "created_at": "2026-07-15T03:38:58.605329+00:00",
+  "updated_at": "2026-07-15T03:39:41.230904+00:00"
+}

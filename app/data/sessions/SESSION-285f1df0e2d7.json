@@ -1,0 +1,52 @@
+{
+  "session_id": "SESSION-285f1df0e2d7",
+  "ticket_id": "TICKET-308a7b2d",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Shall I use soap or shampoo for hair?",
+      "timestamp": "2026-07-15T05:22:27.716019+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Your ticket has been forwarded to a human support agent for review.",
+      "timestamp": "2026-07-15T05:22:28.356894+00:00"
+    },
+    {
+      "role": "user",
+      "content": "How to create user account?",
+      "timestamp": "2026-07-15T05:22:59.514258+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "To create a TaskFlow account, open the TaskFlow sign-up page and enter your name, work email address, and a secure password. A verification email will be sent to the provided address. The account becomes active only after the email is verified. If the verification email does not arrive within a few minutes, you can check the spam folder or request another verification email.",
+      "timestamp": "2026-07-15T05:23:01.022151+00:00"
+    },
+    {
+      "role": "user",
+      "content": "What was my last 2 questions?",
+      "timestamp": "2026-07-15T05:23:32.634306+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Your ticket has been forwarded to a human support agent for review.",
+      "timestamp": "2026-07-15T05:23:33.241079+00:00"
+    }
+  ],
+  "classification": {
+    "category": "general",
+    "urgency": "low",
+    "sentiment": "neutral",
+    "summary": "The user is inquiring about their previous questions in the conversation."
+  },
+  "selected_faq_ids": [],
+  "judge_score": 0.0,
+  "judge_decision": null,
+  "judge_feedback": null,
+  "retry_count": 0,
+  "status": "escalated",
+  "human_review_required": true,
+  "escalation_reason": "no_faq_match",
+  "created_at": "2026-07-15T05:22:27.716019+00:00",
+  "updated_at": "2026-07-15T05:23:33.241100+00:00"
+}
